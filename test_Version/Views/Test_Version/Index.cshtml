@@ -1,0 +1,51 @@
+﻿@model IEnumerable<test_Version.Models.Test_VersionViewModel>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="card spur-card">
+                            @*<div class="card-header">
+                                <p>
+                                    <a asp-action="Create" type="button" class="btn btn-primary">Thêm mới</a>
+                                </p>
+                            </div>*@
+                            <table class="table table-hover table-in-card">
+                                <tr class="table-info">
+                                    <th>
+                                        List All Version Name
+                                    </th>
+                                    <th>
+                                        <p>
+                                            <a asp-action="Create" type="button" class="btn btn-primary">Thêm mới</a>
+                                        </p>
+                                    </th>
+                                </tr>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@Html.DisplayFor(modelItem => item.VersionName)</td>
+                                        <td>
+                                            <div class="mt-3">
+                                                <a type="button" class="btn btn-primary  mb-1" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                                <a onclick="if(!(confirm('Bạn có chắc muốn xóa Tên này'))) { return false}" type="button" class="btn btn-danger rounded-0  mb-1" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    }
+                            </table>
+                        </div>
+
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
