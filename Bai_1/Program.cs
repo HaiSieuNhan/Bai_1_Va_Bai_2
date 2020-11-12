@@ -59,7 +59,6 @@ namespace Bai_1
                 }
                 Console.WriteLine();
                 Console.WriteLine();
-
             }
 
         }
