@@ -22,9 +22,12 @@ namespace Bai_1
             List<string> list = new List<string>() { "1", "2" };
             List<string> list1 = new List<string>() { "a", "b" };
             List<string> list2 = new List<string>() { "x", "y", "z" };
+            List<string> list3 = new List<string>() { "Ac", "Bb", "Cc" };
+
             Foo.Add(list);
             Foo.Add(list1);
             Foo.Add(list2);
+            Foo.Add(list3);
             GhepPhanTuNangCao(Foo);
         }
         static void GhepPhanTuNangCao(List<List<string>> Foo)
